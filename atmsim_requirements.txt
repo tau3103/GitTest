@@ -1,0 +1,46 @@
+ATMS
+Requiremets (16)
+1.User  <-> ATM
+	i. Operator <-> ATM
+		a. ATM  will  provide facility to authenticate operator
+		b. ATM will provide facility to run and show current diagnostic status (current cash avialable, etc..)
+		c. ATM will provide facility to reset ATM
+		d. ATM will provide  facility to store logs in operator USB
+	ii. Customer <->  ATM
+		a. ATM will provide facility to enter customer pin
+		b. ATM will provide facility  to perform below activities
+			- cash withdrwal
+			- cash deposit
+			- balance enquiry
+			- pin change
+			- tansfer cash to other account
+		c. ATM will provide facility to generate customer slip
+		d. ATM will provide facility to update customer details like
+			- mob. no.
+			- email id
+			- dob, etc
+		f. ATM will provide facility to cancel any request in between
+		g. ATM will provide facility to lock the user if 3/5 invalid pin entry are made
+		h. ATM will provide facility to read customer info [ from file ]
+
+2. BANK <-> ATM
+	a. ATM  should have  facility  to check connection with bank
+	b. ATM should have  facility to format/de-format the data exchange with Bank
+	c. ATM should have facility to make secure and non-secure connection with bank
+	d. ATM should have facility to send plain/encrypted logs to bank
+	f. ATM   should  have facility to send diagnostic  status to bank
+
+--------------------------------------
+List of class  subclass at top level
+ATM
+	- UserInterface
+	- Protcol
+	- Network
+	- Logger
+	- FileIO
+	
+BANK
+	- Protcol
+	- Network
+	- Logger
+	- Database
